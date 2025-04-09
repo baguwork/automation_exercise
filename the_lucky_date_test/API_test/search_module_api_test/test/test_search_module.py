@@ -1,6 +1,5 @@
 import allure
 import pytest
-import time
 
 from the_lucky_date_test.API_test.search_module_api_test.utils.api_client import search_users
 from test_data import test_data_positive, test_data_negative
