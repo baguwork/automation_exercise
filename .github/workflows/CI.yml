@@ -39,7 +39,7 @@ jobs:
         keep_reports: true
 
     - name: Upload Allure report as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: Allure-report
         path: allure-report
