@@ -2,4 +2,3 @@ requests
 pytest
 PyYAML
 allure-pytest
-time
