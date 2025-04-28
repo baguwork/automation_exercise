@@ -7,7 +7,7 @@ class ProductPageObject:
         self.page = page
 
     def cookie_btn(self):
-        locator = self.page.get_by_role('button', name='Соглашаюсь')
+        locator = self.page.locator('xpath=/html/body/div/div[2]/div[2]/div[2]/div[2]/button[1]/p')
         locator.wait_for()
         return locator
 

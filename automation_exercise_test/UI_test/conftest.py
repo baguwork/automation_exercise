@@ -1,5 +1,7 @@
 import logging
 import time
+
+from automation_exercise_test.UI_test.search_page_test.config.config_reader import headless_mode, slow_mo
 from automation_exercise_test.UI_test.search_page_test.data.test_page_object import ProductPageObject
 
 import pytest
@@ -9,7 +11,7 @@ from playwright.sync_api import sync_playwright, Page
 @pytest.fixture(scope='function')
 def pw_open():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, slow_mo=1500)
+        browser = p.chromium.launch(headless=headless_mode, slow_mo=slow_mo)
         context = browser.new_context()
         page = context.new_page()
         page.goto('https://www.automationexercise.com/products', wait_until='load')
