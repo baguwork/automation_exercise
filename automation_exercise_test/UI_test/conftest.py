@@ -1,6 +1,6 @@
 import logging
 import time
-from automation_test.UI_test.search_page_test.data.test_page_object import ProductPageObject
+from automation_exercise_test.UI_test.search_page_test.data.test_page_object import ProductPageObject
 
 import pytest
 from playwright.sync_api import sync_playwright, Page

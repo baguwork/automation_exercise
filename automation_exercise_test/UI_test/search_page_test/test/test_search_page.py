@@ -5,7 +5,7 @@ import time
 import allure
 from playwright.sync_api import Page
 
-from automation_test.UI_test.search_page_test.data.test_page_object import ProductPageObject
+from automation_exercise_test.UI_test.search_page_test.data.test_page_object import ProductPageObject
 
 
 # def test_scroll_up(pw_open: Page):

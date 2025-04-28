@@ -14,7 +14,7 @@ def convert_xlsx_to_pytest_data(file_path):
         }
 
         result.append((criteria, limit))
-    with open('/automation_test/API_test/search_module_api_test/test/test_data.py', 'a') as f:
+    with open('/automation_exercise_test/API_test/search_module_api_test/test/test_data.py', 'a') as f:
         f.write("test_data_positive = " + repr(result))
 
     return result

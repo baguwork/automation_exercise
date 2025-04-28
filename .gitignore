@@ -13,5 +13,6 @@ allure-results/
 
 venv
 
+automation_exercise_test/API_test
 
 draft.py
