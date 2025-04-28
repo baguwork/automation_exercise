@@ -1,0 +1,17 @@
+# PyCharm project settings
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Allure results (если хочешь, чтобы мусор не коммитился)
+allure-results/
+
+venv
+
+
+draft.py

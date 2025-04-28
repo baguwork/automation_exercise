@@ -1,7 +1,7 @@
 import requests
-from the_lucky_date_test.API_test.search_module_api_test.config.config_reader import BASE_URL, cookies, \
+from automation_exercise_test.API_test.search_module_api_test.config.config_reader import BASE_URL, cookies, \
     cookies_incognito
-from the_lucky_date_test.API_test.search_module_api_test.utils.endpoints import GRAPHQL
+from automation_exercise_test.API_test.search_module_api_test.utils.endpoints import GRAPHQL
 
 def like_user(user_id):
     headers = {
