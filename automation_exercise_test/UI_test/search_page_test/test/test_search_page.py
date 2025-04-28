@@ -175,7 +175,10 @@ from automation_exercise_test.UI_test.search_page_test.data.test_page_object imp
 def test_continue_shopping(pw_open: Page):
     pobj = ProductPageObject(pw_open)
     with allure.step('нажатие кнопки согласится с куки'):
-        pobj.cookie_btn().click()
+        try:
+            pobj.cookie_btn().click(timeout=3000)  # попробуй 3 секунды
+        except:
+            pass  # Если нет кнопки — ничего страшного
     with allure.step('добавить в корзину товар 1'):
         pobj.add_to_cart(1).click()
     with allure.step('продолжить покупки нажатие'):
