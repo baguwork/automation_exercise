@@ -28,11 +28,11 @@ jobs:
         pip install -r requirements.txt
         pip install allure-pytest
 
-#    - name: Run tests with Allure
-#      run: |
-#        mkdir -p allure-results
-#        pytest the_lucky_date_test/API_test/search_module_api_test/test --alluredir=allure-results
-#      continue-on-error: true
+    - name: Run tests with Allure
+      run: |
+        mkdir -p allure-results
+        pytest --alluredir=allure-results
+      continue-on-error: true
 
 #    - name: Generate Allure report
 #      uses: simple-elf/allure-report-action@master
@@ -41,11 +41,11 @@ jobs:
 #        allure_report: allure-report
 #        keep_reports: true
 
-#    - name: Upload Allure report as artifact
-#      uses: actions/upload-artifact@v4
-#      with:
-#        name: Allure-report
-#        path: allure-report
+    - name: Upload Allure report as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Allure-report
+        path: allure-report
 
 
 
