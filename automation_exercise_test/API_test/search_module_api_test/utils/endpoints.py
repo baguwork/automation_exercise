@@ -1,4 +1,0 @@
-GRAPHQL = "/graphql"
-
-
-
