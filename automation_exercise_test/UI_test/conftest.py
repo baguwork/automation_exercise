@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright, Page
 @pytest.fixture(scope='function')
 def pw_open():
     with sync_playwright() as p:
-        browser = p.chromium.launch(slow_mo=1500)
+        browser = p.chromium.launch(headless=False, slow_mo=1500)
         context = browser.new_context()
         page = context.new_page()
         page.goto('https://www.automationexercise.com/products', wait_until='load')
