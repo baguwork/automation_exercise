@@ -47,5 +47,7 @@ jobs:
         name: Allure-report
         path: allure-report
 
+    - name: Install Playwright Browsers
+    run: playwright install --with-deps
 
 
