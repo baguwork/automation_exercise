@@ -35,3 +35,7 @@ class ConfigReader:
     @property
     def env(self):
         return self._data.get("env", "local")
+
+    @property
+    def path_to_config(self):
+        return self._data.get("path_to_config, ")

@@ -25,7 +25,7 @@ def product_page(page, config):
 @pytest.fixture(scope="session")
 def config(request):
     env = request.config.getoption("--env")
-    config_path = Path(f"config/{env}.yaml")
+    config_path = Path(__file__).parent / "config" / f"{env}.yaml"
     return ConfigReader(config_path=config_path)
 
 def pytest_addoption(parser):
