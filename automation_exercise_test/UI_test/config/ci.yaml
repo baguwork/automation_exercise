@@ -1,0 +1,6 @@
+env: ci
+base_url: https://www.automationexercise.com
+browser: chromium
+headless: true
+slow_mo: 1000
+timeout: 5000
