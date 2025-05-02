@@ -1,15 +1,23 @@
-import time
 
-from playwright.sync_api import Page
 
 class ProductPageObject:
-    def __init__(self, page: Page):
+    def __init__(self, page, base_url):
         self.page = page
+        self.base_url = base_url
+
+    def open(self):
+        self.page.goto(f"{self.base_url}/products", wait_until="load")
 
     def cookie_btn(self):
-        locator = self.page.locator('xpath=/html/body/div/div[2]/div[2]/div[2]/div[2]/button[1]/p')
+        locator = self.page.locator("button.fc-button.fc-cta-consent.fc-primary-button")
         locator.wait_for()
         return locator
+
+    def click_cookie(self):
+        try:
+            self.cookie_btn().click(timeout=3000)
+        except:
+            pass
 
     def women_link(self):
         locator = self.page.get_by_role("link", name=" Women")
@@ -146,7 +154,7 @@ class ProductPageObject:
         locator.wait_for()
         return locator
 
-    def view_product_count(self):
+    def count_view_product_cards(self):
         locator = self.page.locator(".nav.nav-pills.nav-justified")
         return locator.count()
 
